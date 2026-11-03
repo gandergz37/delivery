@@ -21,6 +21,7 @@ public final class DemoDatabase {
         Path parent = path.toAbsolutePath().getParent();
         if (parent != null) {
             Files.createDirectories(parent);
+			
         }
 
         try (Connection connection = DriverManager.getConnection("jdbc:sqlite:" + databasePath);
